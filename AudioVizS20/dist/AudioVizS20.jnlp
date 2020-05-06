@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AudioVizS20.jnlp">
+  <information>
+    <title>AudioVizS20</title>
+    <vendor>dale</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AudioVizS20.jar" size="197823" download="eager" />
+    <jar href="lib/j3dcore.jar" size="2957997" download="eager" />
+    <jar href="lib/j3dutils.jar" size="1704635" download="eager" />
+    <jar href="lib/vecmath.jar" size="318956" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="AudioVizS20" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="audioviz.AudioViz"  name="AudioVizS20" />
+  <update check="always"/>
+</jnlp>

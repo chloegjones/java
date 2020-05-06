@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+}
+
+#pane{
+        -fx-background-image: url("Cgjnd7Stars.gif");
+         -fx-background-size: 100% 100%; 
+        
+}
