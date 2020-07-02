@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: pink; -fx-border-color: deeppink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cgjnd7mvcstopwatchfxmls20.FXMLDocumentController">
+    <children>
+      <HBox prefHeight="36.0" prefWidth="655.0" />
+      <AnchorPane layoutX="3.0" layoutY="42.0" prefHeight="406.0" prefWidth="652.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+         <children>
+            <LineChart fx:id="lineChart" layoutX="227.0" layoutY="33.0" prefHeight="280.0" prefWidth="425.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" style="-fx-border-image-insets: 12;" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </LineChart>
+            <Label fx:id="lap" layoutX="311.0" layoutY="355.0" text="Lap-:">
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <Label fx:id="timer" layoutX="279.0" layoutY="330.0" prefHeight="17.0" prefWidth="94.0">
+               <effect>
+                  <DropShadow />
+               </effect></Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="13.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@clockface.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <HBox layoutX="270.0" layoutY="388.0" prefHeight="36.0" prefWidth="150.0">
+               <children>
+                    <Button fx:id="startStop" onAction="#startStopButton" prefHeight="27.0" prefWidth="59.0" text="Start">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="recordReset" onAction="#recordResetButton" text="Record">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fx:id="handImage" fitHeight="143.0" fitWidth="150.0" layoutX="16.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
