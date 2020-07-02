@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="menuPane" prefHeight="576.0" prefWidth="954.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cgjnd7divelearning.MenuController">
+   <children>
+      <Text layoutX="311.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What topics would you like to be educated on?">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font></Text>
+      <Button layoutX="28.0" layoutY="535.0" mnemonicParsing="false" onAction="#goToLogin" style="-fx-background-color: pink;" text="Logout" />
+      <MenuButton layoutX="437.0" layoutY="59.0" mnemonicParsing="false" style="-fx-background-color: pink;" text="Options">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#getHistory" onMenuValidation="#getHistory" text="History" />
+            <MenuItem mnemonicParsing="false" onAction="#getNews" text="Recent News" />
+        </items>
+      </MenuButton>
+      <Accordion layoutX="56.0" layoutY="104.0" prefHeight="409.0" prefWidth="834.0" style="-fx-background-color: purple; -fx-border-color: purple; -fx-border-width: 8px;">
+        <panes>
+          <TitledPane animated="false" text="Women">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="womenPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="newsListViewWomen" prefHeight="272.0" prefWidth="258.0" />
+                              <WebView fx:id="webViewWomen" layoutX="251.0" prefHeight="272.0" prefWidth="579.0" />
+                              <TextArea fx:id="womenText" prefHeight="272.0" prefWidth="258.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="LGBTQ+">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="lgbtqPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="newsListViewLgbtq" prefHeight="272.0" prefWidth="258.0" />
+                              <WebView fx:id="webViewLgbtq" layoutX="258.0" layoutY="-1.0" prefHeight="275.0" prefWidth="579.0" />
+                              <TextArea fx:id="LText" layoutY="1.0" prefHeight="272.0" prefWidth="258.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="People with Disabilities">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="dPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <WebView fx:id="webViewD" layoutX="258.0" prefHeight="272.0" prefWidth="573.0" />
+                              <ListView fx:id="newsListViewD" prefHeight="272.0" prefWidth="258.0" />
+                              <TextArea fx:id="DText" prefHeight="272.0" prefWidth="258.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="64.0" text="African-Americans">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="africanPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="newsListViewAfrican" prefHeight="272.0" prefWidth="258.0" />
+                              <WebView fx:id="webViewAfrican" layoutX="258.0" prefHeight="272.0" prefWidth="579.0" />
+                              <TextArea fx:id="AText" prefHeight="273.0" prefWidth="258.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="91.0" text="Hispanic">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="hispanicPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="newsListViewHispanic" prefHeight="272.0" prefWidth="258.0" />
+                              <WebView fx:id="webViewHispanic" layoutX="258.0" prefHeight="278.0" prefWidth="579.0" />
+                              <TextArea fx:id="HText" prefHeight="275.0" prefWidth="258.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <Button fx:id="save" layoutX="817.0" layoutY="535.0" mnemonicParsing="false" onAction="#save" style="-fx-background-color: gold;" text="Save Comments" />
+   </children>
+</AnchorPane>
